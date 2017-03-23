@@ -1,0 +1,18 @@
+{
+  "name": "nodeschool_backend",
+  "version": "0.1.0",
+  "description": "TODO",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Krzysztof Marcinkiewicz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "body-parser": "^1.15.0",
+    "mongoose": "^4.4.14"
+  }
+}
