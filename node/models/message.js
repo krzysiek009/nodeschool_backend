@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //const ObjectId = mongoose.ObjectId;
 
-const todoSchema = new Schema({
+const messageSchema = new Schema({
   author: {
     type: String,
     required: true
@@ -21,6 +21,6 @@ const todoSchema = new Schema({
   }
 });
 
-const Todo = mongoose.model('Todo', todoSchema);
+const Message = mongoose.model('Message', messageSchema);
 
-module.exports = Todo;
+module.exports = Message;
