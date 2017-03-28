@@ -3,7 +3,7 @@ var User = require('./models/user');
 
 module.exports = function (app) {
 
-  app.get('/', function(req, res){
+  app.get('/', function (req, res) {
     res.send("Hello, World! Is the reload working?l");
   });
 
@@ -15,9 +15,14 @@ module.exports = function (app) {
   });
 
   app.post('/messages', function (req, res) {
-    new Msg({author: req.body.author, text: req.body.text}).save();
-    res.send(req.header);
-    res.end();
+    new Msg({ author: req.body.author, text: req.body.text })
+      .save()
+      .then(() => {
+        res.send(200, 'OK');
+      })
+      .catch(() => {
+        res.send(418);
+      });
   });
 
 };
